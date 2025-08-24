@@ -1,4 +1,6 @@
 #!/bin/zsh
+# Only load if tool is present
+command -v pwsh >/dev/null 2>&1 || return
 
 function upgradepwsh() {
   brew upgrade powershell

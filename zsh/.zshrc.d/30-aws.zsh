@@ -2,6 +2,10 @@
 ########################
 # AWS-specific setup
 ########################
+
+# Only load if AWS CLI is present
+command -v aws >/dev/null 2>&1 || return
+
 export AWS_CONFIG_FILE="$HOME/.aws/config"
 
 #+++++++++++++++++++++++++++++++++++++
