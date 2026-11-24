@@ -21,19 +21,30 @@ if [[ -s "${_gitcmd}" ]]; then
     git checkout "${_branch}" && git pull
   }
 
-  gfapd() {
+  if (( ${+aliases[gfap]} )); then
+    unalias gfap
+  fi
+
+  function gfap {
+    emulate -L zsh
     git fetch --all --prune || return
-    local base
-    base=$(git symbolic-ref --short refs/remotes/origin/HEAD) || return
-    git for-each-ref --format='%(refname:short) %(upstream:track)' refs/heads |
-      while read -r branch track; do
-        [[ "$track" == "[gone]" ]] || continue
-        if git merge-base --is-ancestor "$branch" "$base"; then
-          git branch -D "$branch"
-        else
-          echo "Kept $branch: not in $base (squash-merged or unmerged work)"
-        fi
-      done
+
+    local branches branch answer
+    branches=$(LC_ALL=C git for-each-ref \
+      --format='%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' \
+      refs/heads) || return
+    [[ -n "${branches}" ]] || return 0
+
+    for branch in "${(@f)branches}"; do
+      printf "Force-delete local branch '%s' (upstream gone)? [y/N] " "${branch}" >&2
+      if ! IFS= read -r answer; then
+        printf '\ngfap: could not read confirmation; stopped without deleting %s\n' "${branch}" >&2
+        return 1
+      fi
+      if [[ "${answer}" == [yY] ]]; then
+        git branch -D -- "${branch}" || return
+      fi
+    done
   }
 
   alias gchm="git checkout main || git checkout master"
@@ -46,7 +57,6 @@ if [[ -s "${_gitcmd}" ]]; then
   alias gcl="git config --list"
   alias gf="git fetch"
   alias gfa="git fetch --all"
-  alias gfap="git fetch --all --prune"
   alias gll="git status"
   alias gm="git merge"
   alias gp="git pull"
