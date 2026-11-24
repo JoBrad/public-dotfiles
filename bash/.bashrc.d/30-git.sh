@@ -20,6 +20,32 @@ if [[ -s "${_gitcmd}" ]]; then
     git checkout "${_branch}" && git pull
   }
 
+  if alias gfap >/dev/null 2>&1; then
+    unalias gfap
+  fi
+
+  function gfap() {
+    git fetch --all --prune || return
+
+    local branches branch answer
+    branches=$(LC_ALL=C git for-each-ref \
+      --format='%(if:equals=[gone])%(upstream:track)%(then)%(refname:short)%(end)' \
+      refs/heads) || return
+    [[ -n "${branches}" ]] || return 0
+
+    while IFS= read -r branch <&3; do
+      [[ -n "${branch}" ]] || continue
+      printf "Force-delete local branch '%s' (upstream gone)? [y/N] " "${branch}" >&2
+      if ! IFS= read -r answer; then
+        printf '\ngfap: could not read confirmation; stopped without deleting %s\n' "${branch}" >&2
+        return 1
+      fi
+      if [[ "${answer}" == [yY] ]]; then
+        git branch -D -- "${branch}" || return
+      fi
+    done 3<<< "${branches}"
+  }
+
   alias gchm="git checkout main || git checkout master"
   alias ga="git add"
   alias gb="git branch"

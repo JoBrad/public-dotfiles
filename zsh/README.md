@@ -40,3 +40,12 @@ fi
 Files are sorted alphabetically when loaded. The standard convention here is to
 prefix files numerically to ensure load order, if needed: 10-*, 20-*, etc.
 
+# Git branch cleanup
+
+`gfap` fetches all remotes and prunes stale remote-tracking refs, then asks
+whether to force-delete each local branch whose configured upstream ref is
+missing locally. This includes squash-merged branches, but a missing upstream
+does not guarantee that the remote branch was deleted or that local commits
+were merged. Review each branch before confirming; Git will refuse to delete a
+branch checked out in a worktree.
+
