@@ -21,6 +21,21 @@ if [[ -s "${_gitcmd}" ]]; then
     git checkout "${_branch}" && git pull
   }
 
+  gfapd() {
+    git fetch --all --prune || return
+    local base
+    base=$(git symbolic-ref --short refs/remotes/origin/HEAD) || return
+    git for-each-ref --format='%(refname:short) %(upstream:track)' refs/heads |
+      while read -r branch track; do
+        [[ "$track" == "[gone]" ]] || continue
+        if git merge-base --is-ancestor "$branch" "$base"; then
+          git branch -D "$branch"
+        else
+          echo "Kept $branch: not in $base (squash-merged or unmerged work)"
+        fi
+      done
+  }
+
   alias gchm="git checkout main || git checkout master"
   alias ga="git add"
   alias gb="git branch"
