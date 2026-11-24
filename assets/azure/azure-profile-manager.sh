@@ -283,7 +283,7 @@ list_profiles() {
 switch_profile() {
   local profile_name="$1"
 
-  local export="no"
+  local export="az"
   if [[ "$2" == "--export-arm" ]];
   then
     export="arm"
