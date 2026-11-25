@@ -10,6 +10,7 @@ Thumbs.db
 !/.agents/
 !/.agents/**
 !/AGENTS.md
+!/CHANGELOG.md
 !/LICENSE
 !/README.md
 !/assets/

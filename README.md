@@ -57,19 +57,35 @@ For detailed configuration and feature lists for each shell, see:
 - [**Bash Configuration** (bash/README.md)](./bash/README.md) — Includes prompt customization, grep color output, and bash-specific features.
 - [**Zsh Configuration** (zsh/README.md)](./zsh/README.md) — Includes Node.js/npm configuration, Azure CLI integration, and zsh-specific features.
 
-# Notable changes
+# Changelog
 
-### 1.0
+See [CHANGELOG.md](./CHANGELOG.md) for a complete version history.
 
-- Initial commit
+## [1.3.0] - 2026-11-25
 
-### 1.1
+### Added
+- Documentation build system with automated docstring extraction
+- `scripts/update-docs.sh` for auto-generating shell configuration documentation
+- Shdoc-compatible docstrings to all bash and zsh configuration files
+- Auto-generated "Configuration files" sections in shell-specific READMEs
 
-- Added `tfswitch` config for both terraform and tofu
-- Added `tfpnc` alias -> `tf plan -no-color -concise` (useful when redirecting a plan to a text file)
-- Added Azure Profile Manager helper (by Austin Maddox)
+### Changed
+- Refactored top-level README for better organization
+- Simplified devbox.json build command to use new build script
 
-### 1.2
+## [1.2.0] - 2026-05-21
 
-- AWS profile manager: added support for an optional region to be passed when setting the current profile.
-- Tf: Added `tfpnc` alias for plan output without color codes, useful when redirecting to a file.
+### Added
+- AWS profile manager: support for passing optional region when setting current profile
+- `tfpnc` alias for Terraform plan output without color codes
+
+## [1.1.0] - 2026-03-15
+
+### Added
+- tfswitch config support for both Terraform and OpenTofu
+- Azure Profile Manager helper (contributed by Austin Maddox)
+
+## [1.0.0] - 2026-01-10
+
+### Added
+- Initial release of dotfiles configuration
