@@ -1,4 +1,10 @@
 #!/usr/bin/env zsh
+#
+# Node.js and npm XDG Base Directory configuration.
+#
+# Configures XDG-aligned paths for node and npm, initializes npmrc when missing,
+# and sets environment variables for Node REPL history and npm configuration.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # NPM config paths

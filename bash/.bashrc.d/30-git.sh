@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+#
+# Git aliases and helpers for common workflows.
+#
+# Provides aliases for frequent git operations (add, checkout, fetch, merge, pull),
+# helpers for checkout-and-pull and batch operations, and optional directory
+# shortcuts for configured git workspace roots.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # Git aliases

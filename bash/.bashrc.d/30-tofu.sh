@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+#
+# OpenTofu and Terraform configuration management.
+#
+# Provides comprehensive tf alias suite for init, plan, apply, state, and
+# workspace operations. Includes tfpnc alias for plan output without color
+# codes, and prompt workspace context helpers for tofu and terraform directories.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # OpenTofu config

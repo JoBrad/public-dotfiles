@@ -4,14 +4,19 @@ Thumbs.db
 
 !/.gitignore
 !/.editorconfig
+!/devbox.json
+!/devbox.lock
 !/install.sh
 !/.agents/
 !/.agents/**
 !/AGENTS.md
+!/CHANGELOG.md
 !/LICENSE
 !/README.md
 !/assets/
 !/assets/**
+!/scripts/
+!/scripts/**
 !/bash/
 !/bash/**
 /bash/**/.DS_Store

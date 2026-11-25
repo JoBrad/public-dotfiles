@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-
+#
+# Configure grep with colorized output and VCS directory exclusion.
+#
+# Customizes grep, egrep, and fgrep with color highlighting and excludes
+# common version control and IDE directories from search results.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # Grep color output

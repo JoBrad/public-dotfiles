@@ -1,0 +1,74 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "gawk@latest": {
+      "last_modified": "2026-11-22T18:15:35Z",
+      "resolved": "github:NixOS/nixpkgs/619c39f6eac5d1ed6b8f073a9414baf7034b2356#gawk",
+      "source": "devbox-search",
+      "version": "5.4.1",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/f0rw1mxzkv2ws5k2571j3mizg01m91s8-gawk-5.4.1",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/vsykb8c05rrcp2r7d2wcywf9nh6dy5x4-gawk-5.4.1-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/xd8ldnkhixfgjvjm40m8d5z8h81haclg-gawk-5.4.1-info"
+            }
+          ],
+          "store_path": "/nix/store/f0rw1mxzkv2ws5k2571j3mizg01m91s8-gawk-5.4.1"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/62adp9f907m9iagdl017qfgv816kfwld-gawk-5.4.1",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/ljk425ngw98mvi1fqqsxw2i7gh9nzncr-gawk-5.4.1-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/n3405c96vcqi71zhi81xx772xi6bldj2-gawk-5.4.1-info"
+            }
+          ],
+          "store_path": "/nix/store/62adp9f907m9iagdl017qfgv816kfwld-gawk-5.4.1"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6jw5614njszmn5v325j9lq1fwp4p6lyx-gawk-5.4.1",
+              "default": true
+            },
+            {
+              "name": "man",
+              "path": "/nix/store/fv54airmm3dvnxj59ypy804wlncarvhv-gawk-5.4.1-man",
+              "default": true
+            },
+            {
+              "name": "info",
+              "path": "/nix/store/5iialxaw4v4m2by4lwvr1gylddznmgc0-gawk-5.4.1-info"
+            }
+          ],
+          "store_path": "/nix/store/6jw5614njszmn5v325j9lq1fwp4p6lyx-gawk-5.4.1"
+        }
+      }
+    },
+    "github:NixOS/nixpkgs/nixpkgs-unstable": {
+      "last_modified": "2026-11-03T11:44:38Z",
+      "resolved": "github:NixOS/nixpkgs/ea9e3ef341e11c193537f674f821a99f9f436729?lastModified=1793706278"
+    }
+  }
+}

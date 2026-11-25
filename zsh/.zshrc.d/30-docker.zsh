@@ -1,4 +1,9 @@
 #!/usr/bin/env zsh
+#
+# Docker Compose convenience aliases.
+#
+# Provides short aliases for common Docker Compose workflows: up, down, and run.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # Docker-specific setup

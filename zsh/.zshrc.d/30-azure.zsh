@@ -1,4 +1,11 @@
 #!/usr/bin/env zsh
+#
+# Azure CLI profile management and integration.
+#
+# Provides Azure profile manager bootstrap with local helper script installation,
+# alias entrypoint for profile manager usage, and command completion for Azure
+# profile management actions.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # Azure Profile Manager script, and custom aliases
