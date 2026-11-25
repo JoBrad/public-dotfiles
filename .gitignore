@@ -4,6 +4,8 @@ Thumbs.db
 
 !/.gitignore
 !/.editorconfig
+!/devbox.json
+!/devbox.lock
 !/install.sh
 !/.agents/
 !/.agents/**
@@ -12,6 +14,8 @@ Thumbs.db
 !/README.md
 !/assets/
 !/assets/**
+!/scripts/
+!/scripts/**
 !/bash/
 !/bash/**
 /bash/**/.DS_Store

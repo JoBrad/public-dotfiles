@@ -40,6 +40,57 @@ fi
 Files are sorted alphabetically when loaded. The standard convention here is to
 prefix files numerically to ensure load order, if needed: 10-*, 20-*, etc.
 
+# Configuration files
+
+<!-- BEGIN_SH_DOCS -->
+### 00-paths.sh
+
+Configure XDG Base Directory Specification paths.
+
+### 10-direnv.sh
+
+Initialize and configure direnv for shell integration.
+
+### 10-security.sh
+
+Configure shell settings for enhanced security and privacy.
+
+### 20-aliases.sh
+
+Define common shell aliases and shortcut functions.
+
+### 20-prompt.sh
+
+Configure the bash shell prompt.
+
+### 30-aws.sh
+
+AWS CLI profile management and integration.
+
+### 30-docker.sh
+
+Docker Compose convenience aliases.
+
+### 30-git.sh
+
+Git aliases and helpers for common workflows.
+
+### 30-grep.sh
+
+Configure grep with colorized output and VCS directory exclusion.
+
+### 30-pwsh.sh
+
+PowerShell upgrade and WSMan module installation helpers.
+
+### 30-tofu.sh
+
+OpenTofu and Terraform configuration management.
+
+
+
+<!-- END_SH_DOCS -->
+
 # Git branch cleanup
 
 `gfap` fetches all remotes and prunes stale remote-tracking refs, then asks

@@ -1,4 +1,10 @@
 #!/usr/bin/env zsh
+#
+# Initialize and configure devbox for shell integration.
+#
+# Sets up Nix paths required by devbox and integrates the devbox environment
+# into the current zsh shell session.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # devbox startup

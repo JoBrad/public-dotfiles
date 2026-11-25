@@ -1,4 +1,10 @@
 #!/usr/bin/env zsh
+#
+# Initialize and configure direnv for shell integration.
+#
+# Sets up direnv configuration paths and bootstraps custom direnv helper
+# scripts from project assets into the direnv lib directory.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # direnv startup

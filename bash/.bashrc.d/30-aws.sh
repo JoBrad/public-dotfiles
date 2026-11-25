@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+#
+# AWS CLI profile management and integration.
+#
+# Provides helpers to list AWS profiles, get/set active profile and region,
+# manage shell completion for AWS profile-aware commands, and auto-initiate
+# AWS SSO login when switching to profiles that require authentication.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # AWS Profile Manager script, and custom aliases

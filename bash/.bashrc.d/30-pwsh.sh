@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
+#
+# PowerShell upgrade and WSMan module installation helpers.
+#
+# Provides upgradepwsh function to refresh PowerShell to the latest version
+# and install required WSMan dependencies via Homebrew.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # Powershell updater

@@ -1,4 +1,11 @@
 #!/usr/bin/env zsh
+#
+# Define common shell aliases and shortcut functions.
+#
+# Provides navigation shortcuts (.. ... ....), directory listing aliases with
+# GNU tools preference, archive shortcuts, and utility functions like psgrep,
+# cls, and fuck for common command patterns.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # Custom aliases for common commands and tools

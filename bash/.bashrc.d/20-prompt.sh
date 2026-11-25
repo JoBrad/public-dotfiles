@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+#
+# Configure the bash shell prompt.
+#
+# Sets up a two-line prompt displaying username (color-coded for root),
+# current directory, and command input indicator. Includes color helper
+# functions for flexible prompt customization.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # Custom bash prompt configuration

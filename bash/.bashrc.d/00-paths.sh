@@ -1,4 +1,11 @@
 #!/usr/bin/env bash
+#
+# Configure XDG Base Directory Specification paths.
+#
+# Sets standard XDG environment variables to organize configuration, data,
+# cache, and state files according to XDG Base Directory Specification,
+# with fallback to default ~/.* directories if not already set.
+#
 
 #+++++++++++++++++++++++++++++++++++++
 # XDG Base Directory Specification
